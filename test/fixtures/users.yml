@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  profile_url: MyString
+  message: MyString
+  sex: MyString
+  relationship_status: MyString
+  anniversary: MyString
+  interested_in: MyString
+  looking_for: MyString
+  hometown: MyString
+  cuurent_city: MyString
+
+two:
+  name: MyString
+  profile_url: MyString
+  message: MyString
+  sex: MyString
+  relationship_status: MyString
+  anniversary: MyString
+  interested_in: MyString
+  looking_for: MyString
+  hometown: MyString
+  cuurent_city: MyString

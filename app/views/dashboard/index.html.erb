@@ -1,0 +1,29 @@
+<h1>Search Facebook Statuses</h1>
+
+<strong>Login</strong><br/>
+<% if @logged_in %>
+  You are already logged in.
+<% else %>
+	info: login first to get more detail results<br/>
+  <%= link_to "Login", @oauth_url %>
+<% end %>
+<br/><br/>
+Input status key here
+
+<% form_tag :action=>"index" do %>
+    status:<br/>
+    <%= text_field_tag "q" %>
+    <%= submit_tag "Search" %>
+<% end %>
+
+<div id='search_result'>
+	<% unless @res.nil? -%>
+	  <% @res['data'].each do |r| -%>
+	    <p><%= link_to(image_tag(determine_profile_picture(@user_info, r)), @user_info['link'])%> <strong><%= link_to(r['from']['name'], @user_info['link']) %></strong></p>
+	    <p><%= r['message']%></p>
+	    <hr/>
+	  <% end -%>
+	
+		<%= link_to('Next', root_path(:url=> @res['paging']['next'], :q => params[:q])) unless @res['paging'].nil? %>
+	<% end -%>
+</div>

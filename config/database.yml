@@ -1,0 +1,18 @@
+
+development:
+  adapter: mysql
+  encoding: utf8
+  database: openbook_dev
+  username: root
+
+test:
+  adapter: mysql
+  encoding: utf8
+  database: openbook_test
+  username: root
+
+production:
+  adapter: mysql
+  encoding: utf8
+  database: openbook_prod
+  username: root
